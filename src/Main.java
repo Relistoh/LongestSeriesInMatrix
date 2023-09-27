@@ -42,11 +42,17 @@ public class Main {
             if (seriesLength[i] > maxElement)
                 maxElement = seriesLength[i];
         }
+
+        if (maxElement == 1)
+        {
+            System.out.println("No such lines");
+            System.exit(0);
+        }
+
         System.out.print("Lines with longest series: " + " ");
         for (int i = 0; i < n; i++) {
             if (seriesLength[i] == maxElement)
                 System.out.print(i + 1 + " ");
-
         }
     }
 }
